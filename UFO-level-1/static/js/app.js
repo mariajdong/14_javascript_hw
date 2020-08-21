@@ -7,11 +7,8 @@ var table_body = d3.select ("tbody");
 // create fxn to populate data on webpage
 function push_table (table_data) {
 
-    // clear existing data
-    // get a reference to the tbody element
+    // clear existing table (https://stackoverflow.com/questions/48468672/delete-all-rows-in-an-html-table-except-for-header-with-js)
     var tb = document.querySelector('tbody');
-
-    // while tb has children, remove the first one
     while (tb.childNodes.length) {
         tb.removeChild(tb.childNodes[0]);
     }

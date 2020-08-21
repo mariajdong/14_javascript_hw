@@ -73,6 +73,12 @@ select {
   outline: none;
 }
 
+#filter-btn {
+  margin-bottom: 15px;
+  margin-left: 15px;
+  outline: white solid 1px;
+}
+
 #table-area th {
   text-align: center;
 }

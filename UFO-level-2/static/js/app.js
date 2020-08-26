@@ -50,12 +50,12 @@ function filter_func () {
 
     // pull input date & filter data accordingly
     var filter_input = d3.select (".form-control");
-    var input_value = filter_input.property("value");
+    var input_value = filter_input.property("value").toLowerCase();
     var filtered_data = ufo_data.filter ((entry) => ((entry.datetime == input_value) ||
-                                                     (entry.city.toLowerCase() == input_value) ||
-                                                     (entry.state.toLowerCase() == input_value) ||
-                                                     (entry.country.toLowerCase() == input_value) ||
-                                                     (entry.shape.toLowerCase() == input_value)));
+                                                     (entry.city == input_value) ||
+                                                     (entry.state == input_value) ||
+                                                     (entry.country == input_value) ||
+                                                     (entry.shape == input_value)));
 
     // call push_table fxn to repopulate table
     push_table (filtered_data);
